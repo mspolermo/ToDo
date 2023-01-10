@@ -11,16 +11,13 @@
 <body>
 <div class="simple-todo">
     <div class="tasks-wrapper">
-        <h2>Список задач</h2>
-        <ul id="todo-list">
-            <li>Посмотреть вебинар</li>
-            <li>Написать конспект</li>
-            <li>Повторить код с урока</li>
-        </ul>
+        <div id="head"><h2>Список задач</h2></div>
+        <div id="list"><ul id="todo-list"></ul></div>
     </div>
-    <form id="todo-form">
-        <input id="todo-input" type="text" placeholder="Введите название задачи">
-        <button type="submit">Добавить задачу</button>
+<form id="todo-form">
+        <button id="add" type="submit">+</button>
+        <input id="todo-input" type="text" placeholder="    Введите название задачи">
+        
     </form>
 </div>
     <script src="./main.js"></script>

@@ -8,15 +8,17 @@ function formHandler(event) {
     event.preventDefault(); // Отменяем стандартное поведение кнопки Submit (обновление страницы)
     const taskText = todoInput.value; // Получаем значение введенное в Input поле
     const newTask = document.createElement('li'); // Создаем тег li с помощью создания элемента
-    newTask.innerText = taskText; //Вставляем значение полученные из инпут поля
     
         //Создаем кнопку удалить
     const deleteBtn = document.createElement('button');
     deleteBtn.setAttribute('role', 'button');
-    deleteBtn.innerText = 'x';
-    deleteBtn.style['margin-left'] = '15px';
+    deleteBtn.classList.add('btnDel');
+    deleteBtn.innerText = 'o';
+
     newTask.append(deleteBtn);
+    newTask.append(taskText); //Вставляем значение полученные из инпут поля
     deleteBtn.addEventListener('click', deleteTask) //вешаем функцию удаления по клику на кнопку Х
+    
     
     todoList.append(newTask); //Добавляем элемент на страницу
     todoInput.value=''; // очищаем поле ввода
