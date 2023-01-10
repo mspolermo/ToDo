@@ -1,36 +1,36 @@
 *{
 margin: 0;
 padding: 0;
-
 }
-
 body{
     background-color: #4a4946;
+    color: white;
 }
 
 .simple-todo {
-height: 100vh;
-background-color: #4a4946;
-color: white;
+height: 51vh;
+width: 50%;
+border: 2px solid white;
+float: left;
 }
-
 #head {
     margin-left: 10px;
     margin-top: 10px;
-    width: 40%;
+    width: 95%;
     background-color: gray;
     text-align: center;
     border-radius: 2px;
+    float: left;
 }
 
 #list {
-    width: 40%;
+    width: 95%;
     height: 40vh;
     background-color: gray;
     border-radius: 2px;
     margin: 10px;
+    float: left;
 }
-
 li{
     display: block;
     border: 2px solid white;
@@ -45,14 +45,15 @@ li{
     color: #4a4946;
 }
 
+
 #todo-form {
-    width: 40%; 
+    width: 95%; 
     margin-left: 10px; 
-    height: 30px;
+    height: 34px;
     background-color: gray;
     border-radius: 2px;
+    float: left;
 }
-
 #add {
     height: 90%;
     width: 5%;
@@ -62,5 +63,17 @@ li{
 #todo-input {
     height: 78%;
     width: 88%;
-    margin-top: 1px;
+    margin-top: 2px;
 }
+
+
+    button:hover {
+        cursor: pointer;
+        font-weight:bolder;
+    }
+    li:hover {
+        cursor: default;
+    }
+    #head:hover {
+        cursor: default;
+    }
