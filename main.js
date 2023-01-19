@@ -31,3 +31,16 @@ function deleteTask() {
   через closets ищим ближайший родительский элемент у этого объекта (для кнопки x - тег li с текстом таски),
   удаляем этот элемент */
 }
+
+//Реализация кнопки "Центр"
+const btnCener = document.querySelector('#btnCenter')
+const todo = document.querySelector('#simple-todo')
+let counter = 0;
+btnCener.addEventListener('click', function(){
+  counter++;
+  todo.classList.add('center');
+  if (counter>1) {
+    todo.classList.remove('center');
+    counter=0;
+  }
+})

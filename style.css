@@ -7,18 +7,44 @@ body{
     color: white;
 }
 
-.simple-todo {
-height: 500px;
+#simple-todo {
+height: 528px;
 width: 500px;
 border: 2px solid white;
+border-radius: 2px;
 float: left;
+position: fixed;
 }
+.center {
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#btnCenter{
+    height: 16px;
+    width: 16px;
+    border: 2px solid white;
+    text-align: center;
+    line-height: 16px;
+    position: relative;
+    left: 482px;
+    top:-2px;
+}
+    #btnCenter:hover {
+        cursor: pointer;
+        background-color: white;
+        color: gray;
+        border-radius: 4px;
+    }
 #head {
     margin-left: 10px;
-    margin-top: 10px;
+    margin-top: 6px;
     width: 480px;
+    height: 36px;
     background-color: gray;
     text-align: center;
+    line-height: 36px;
     border-radius: 2px;
     float: left;
 }
