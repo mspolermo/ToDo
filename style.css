@@ -31,12 +31,6 @@ position: fixed;
     left: 482px;
     top:-2px;
 }
-    #btnCenter:hover {
-        cursor: pointer;
-        background-color: white;
-        color: gray;
-        border-radius: 4px;
-    }
 #head {
     margin-left: 10px;
     margin-top: 6px;
@@ -56,6 +50,7 @@ position: fixed;
     border-radius: 2px;
     margin: 10px;
     float: left;
+    overflow: scroll;
 }
 li{
     display: block;
@@ -103,4 +98,10 @@ li{
     }
     #head:hover {
         cursor: default;
+    }
+    #btnCenter:hover {
+        cursor: pointer;
+        background-color: white;
+        color: gray;
+        border-radius: 4px;
     }

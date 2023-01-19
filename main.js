@@ -16,13 +16,14 @@ function formHandler(event) {
     deleteBtn.innerText = 'o';
 
     newTask.append(deleteBtn);
+
     newTask.append(taskText); //Вставляем значение полученные из инпут поля
     deleteBtn.addEventListener('click', deleteTask) //вешаем функцию удаления по клику на кнопку Х
     
-    
-    todoList.append(newTask); //Добавляем элемент на страницу
+    if (taskText !== "") {
+    todoList.insertAdjacentElement('afterbegin', newTask); //Добавляем элемент на страницу
     todoInput.value=''; // очищаем поле ввода
-    todoInput.focus(); //оставляем поле ввода активным
+    todoInput.focus();} //оставляем поле ввода активным
 
 }
 
