@@ -68,6 +68,7 @@ li{
 
 
 #todo-form {
+    position: relative;
     width: 480px; 
     margin-left: 10px; 
     height: 34px;
@@ -76,22 +77,37 @@ li{
     float: left;
 }
 #add {
+    position: relative;
+    float: left;
     height: 25px;
     width: 25px;
     margin-left: 5px;
     color: #4a4946;
 }
 #todo-input {
+    position: relative;
+    float: left;
+    margin-left: 10px;
     height: 22px;
-    width: 435px;
+    width: 400px;
     margin-top: 4px;
+    overflow: hidden;
 
 }
 
-
-    button:hover {
+.add-button {
+    display: block;
+    height: 14px;
+    width: 14px;
+    border: 2px solid white;
+    text-align: center;
+    line-height: 20px;
+}
+    .add-button:hover {
         cursor: pointer;
-        font-weight:bolder;
+        background-color: white;
+        color: gray;
+        border-radius: 4px;
     }
     li:hover {
         cursor: default;
@@ -105,3 +121,7 @@ li{
         color: gray;
         border-radius: 4px;
     }
+
+    [contentEditable=true]:empty:not(:focus):before {
+        content: attr(data-text);
+      }

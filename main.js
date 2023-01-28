@@ -1,12 +1,13 @@
 const todoList = document.querySelector('#todo-list');
 const todoForm = document.querySelector('#todo-form');
+const addButton = document.querySelector('#add');
 const todoInput = document.querySelector('#todo-input');
 
-todoForm.addEventListener('submit', formHandler);
+addButton.addEventListener('click', formHandler);
 
 function formHandler(event) {
-    event.preventDefault(); // Отменяем стандартное поведение кнопки Submit (обновление страницы)
-    const taskText = todoInput.value; // Получаем значение введенное в Input поле
+    //event.preventDefault(); // Отменяем стандартное поведение кнопки Submit (обновление страницы)
+    const taskText = todoInput.innerText; // Получаем значение введенное в Input поле
     const newTask = document.createElement('li'); // Создаем тег li с помощью создания элемента
     
         //Создаем кнопку удалить
@@ -22,10 +23,10 @@ function formHandler(event) {
     
     if (taskText !== "") {
     todoList.insertAdjacentElement('afterbegin', newTask); //Добавляем элемент на страницу
-    todoInput.value=''; // очищаем поле ввода
+    todoInput.innerText=''; // очищаем поле ввода
     todoInput.focus();} //оставляем поле ввода активным
-
 }
+
 
 function deleteTask() {
   this.closest('li').remove();/* через this обращаемся к объекту, на котором висит функция (кнопка x).
@@ -45,3 +46,11 @@ btnCener.addEventListener('click', function(){
     counter=0;
   }
 })
+
+//создание задачи по клавише Enter
+todoInput.addEventListener(
+  'keydown', (event) => {
+    if (event.keyCode == 13) {
+      formHandler();
+    }
+  })
