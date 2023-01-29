@@ -4,24 +4,25 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ToDo list</title>
+    <title>To Do list</title>
     <link rel="stylesheet" href="./style.css" />
     <link rel="shortcut icon" href="#">
 </head>
 <body>
-<div id="simple-todo">
-    <div id="btnCenter" >-</div>
+<div class="simple-todo" id="simple-todo">
+    <div class="btnCenter" id="btnCenter" >-</div>
     <div class="tasks-wrapper">
-        <div id="head"><h2>Список задач</h2></div>
-        <div id="list">
+        <div><h2>Список задач</h2></div>
+        <div class="list">
             <ul id="todo-list"></ul>
         </div>
     </div>
-    <form id="todo-form">
+    <form class="todo-form" id="todo-form">
         <div class="add-button" id="add">+</div>
-        <div id="todo-input" contentEditable=true data-placeholder="Введите название задачи"></div>
+        <div class="todo-input" id="todo-input" contentEditable=true data-placeholder="Введите название задачи"></div>
     </form>
 </div>
     <script src="./main.js"></script>
 </body>
 </html>
+

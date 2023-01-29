@@ -3,7 +3,6 @@ const todoForm = document.querySelector('#todo-form');
 const addButton = document.querySelector('#add');
 const todoInput = document.querySelector('#todo-input');
 
-console.log(todoInput);
 
 //Реализация placeholder
 const placeholder = todoInput.getAttribute('data-placeholder');
@@ -24,7 +23,6 @@ addButton.addEventListener('click', formHandler);
 function formHandler(event) {
     const taskText = todoInput.innerText; // Получаем значение введенное в Input поле 
     if (todoInput.innerText=='Введите название задачи') {
-      console.log(1);
     }else{
      
     const newTask = document.createElement('li'); // Создаем тег li с помощью создания элемента
@@ -46,7 +44,6 @@ function formHandler(event) {
     newTask.append(taskText); //Вставляем значение полученные из инпут поля
     deleteBtn.addEventListener('click', deleteTask) //вешаем функцию удаления по клику на кнопку Х
     
-    console.log('uuu');
     if (taskText !== "") {
     todoList.insertAdjacentElement('afterbegin', newTask); //Добавляем элемент на страницу
     todoInput.innerText=''; // очищаем поле ввода
@@ -77,6 +74,9 @@ btnCener.addEventListener('click', function(){
 //создание задачи по клавише Enter
 todoInput.addEventListener('keydown', (event) => {
     if (event.keyCode == 13) {
+      event.preventDefault();
       formHandler();
     }
   })
+
+// дописать прогу, которая будет расширять строку в 2 раза, при переполнении

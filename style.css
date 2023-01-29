@@ -7,8 +7,7 @@ body{
     color: white;
 }
 
-
-#simple-todo {
+.simple-todo {
 height: 528px;
 width: 500px;
 border: 2px solid white;
@@ -22,7 +21,7 @@ position: fixed;
     transform: translate(-50%, -50%);
 }
 
-#btnCenter{
+.btnCenter{
     height: 16px;
     width: 16px;
     border: 2px solid white;
@@ -32,7 +31,7 @@ position: fixed;
     left: 482px;
     top:-2px;
 }
-#head {
+.tasks-wrapper h2 {
     margin-left: 10px;
     margin-top: 6px;
     width: 480px;
@@ -44,7 +43,7 @@ position: fixed;
     float: left;
 }
 
-#list {
+.list {
     width: 480px;
     height: 400px;
     background-color: gray;
@@ -61,6 +60,7 @@ li{
     border-radius: 5px;
     margin-top: 4px;
     padding-left: 5px;
+    overflow: scroll;
 }
 .btnDel {
     display: inline-block;
@@ -76,7 +76,7 @@ li{
     text-align: center;
 }
 
-#todo-form {
+.todo-form {
     position: relative;
     width: 480px; 
     margin-left: 10px; 
@@ -86,13 +86,15 @@ li{
     float: left;
 }
 
-#todo-input {
+.todo-input {
     position: relative;
     float: left;
     margin-left: 4px;
-    height: 30px;
+    height: 24px;
     width: 444px;
     margin-top: 2px;
+    padding-top: 5px;
+    padding-left: 2px;
     overflow: hidden;
 
 }
@@ -116,10 +118,10 @@ li{
     li:hover {
         cursor: default;
     }
-    #head:hover {
+    .tasks-wrapper h2:hover {
         cursor: default;
     }
-    #btnCenter:hover {
+    .btnCenter:hover {
         cursor: pointer;
         background-color: white;
         color: gray;
