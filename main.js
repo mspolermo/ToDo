@@ -48,6 +48,7 @@ function formHandler(event) {
     todoList.insertAdjacentElement('afterbegin', newTask); //Добавляем элемент на страницу
     todoInput.innerText=''; // очищаем поле ввода
     todoInput.focus();} //оставляем поле ввода активным
+
   }
 };
 
@@ -78,5 +79,3 @@ todoInput.addEventListener('keydown', (event) => {
       formHandler();
     }
   })
-
-// дописать прогу, которая будет расширять строку в 2 раза, при переполнении
